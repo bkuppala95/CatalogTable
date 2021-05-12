@@ -14,7 +14,7 @@ jobs:
       - run:  git add -A
       - run:  git commit -m "Testing workflow"
       - name: Check out repository code
-        uses: main/create-pull-request@v3
+        uses: bkuppala95/CatalogTable/create-pull-request@v3
     
       - name: Check out repository code
         uses: actions/checkout@v2
