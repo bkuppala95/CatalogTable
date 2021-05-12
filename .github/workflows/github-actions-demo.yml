@@ -10,6 +10,8 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your body is ${{ github.event.issue.body }}."
+      - run: git config user.name 'Peter Evans'
+      - run: git config user.email 'peter-evans@users.noreply.github.com'
       - run: echo ${{ github.event.issue.body }} >> test.txt
       - run:  git add -A
       - run:  git commit -m "Testing workflow"
