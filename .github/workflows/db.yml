@@ -1,11 +1,16 @@
+name: GitHub Actions 
+on:
+  issues:
+    types: [opened,edited]
 jobs:
+ 
   createPullRequest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - name: Make changes to pull request
-        - run: echo ${{ github.event.issue.body }} >> test.txt
+          run:echo {{ github.event.issue.body }} >> test.txt
 
       - name: Create Pull Request
         id: cpr
