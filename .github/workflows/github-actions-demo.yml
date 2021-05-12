@@ -14,8 +14,8 @@ jobs:
       - run:  git add -A
       - run:  git commit -m "Testing workflow"
       - name: Check out repository code
-        uses: bkuppala95/CatalogTable/create-pull-request@v3
-    
+        uses: bkuppala95/CatalogTable/create-pull-request
+        
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
