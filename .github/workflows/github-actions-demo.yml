@@ -9,14 +9,13 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install git
       - run: git config --global user.name "Catalogtable"
-      - run: |
-             git config --global user.email "kuppala.bhavan@gmail.com"
-             mkdir GitWorkspace
-             cd GitWorkspace
-             git clone https://github.com/bkuppala95/CatalogTable.git
-             echo ${{ github.event.issue.body }} >> cata.txt
-             git add -A
-             git commit -m "Add untracked file during workflow"
+      - run: git config --global user.email "kuppala.bhavan@gmail.com"
+      - run: mkdir GitWorkspace
+      - run: cd GitWorkspace
+      - run: git clone https://github.com/bkuppala95/CatalogTable.git
+      - run: echo ${{ github.event.issue.body }} >> cata.txt
+      - run: git add -A
+      - run: git commit -m "Add untracked file during workflow"
 
 
              
