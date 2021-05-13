@@ -13,7 +13,7 @@ jobs:
       - run: mkdir GitWorkspace
       - run: cd GitWorkspace
       - run: git clone https://github.com/bkuppala95/CatalogTable.git
-      - run: cd CatalogTable
+      - run: cd /CatalogTable
       - run: ls
       - run: echo '${{ github.event.issue.body }}' >> cata.txt
       - run: git add -A
