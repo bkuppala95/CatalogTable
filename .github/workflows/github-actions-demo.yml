@@ -6,7 +6,23 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: ssh kuppala@db2i-kuppalabhavan-ld4mz-x86.fyre.ibm.com
+      - run: sudo apt-get update
+      - run: sudo apt-get install git
+      - run: git config --global user.name "Catalogtable"
+      - run: |
+             git config --global user.email "kuppala.bhavan@gmail.com"
+             mkdir GitWorkspace
+             cd GitWorkspace
+             git clone https://github.com/bkuppala95/CatalogTable.git
+             echo ${{ github.event.issue.body }} >> cata.txt
+             git add -A
+             git commit -m "Add untracked file during workflow"
+
+      - name: Create Pull Request
+        uses: kuppala.bhavan/create-pull-request@v3
+
+             
+             
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
