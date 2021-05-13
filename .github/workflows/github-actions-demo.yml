@@ -12,13 +12,13 @@ jobs:
       - run: git config --global user.email "kuppala.bhavan@gmail.com"
       - run: mkdir GitWorkspace
       - run: cd GitWorkspace
-      - run: git clone https://github.com/bkuppala95/CatalogTable.git
-      - run: cd CatalogTable
-      - run: pwd
-      - run: ls
-      - run: echo '${{ github.event.issue.body }}' >> cata.txt
-      - run: git add -A
-      - run: git commit -m "Add untracked file during workflow"
+             git clone https://github.com/bkuppala95/CatalogTable.git
+             cd CatalogTable
+             pwd
+             ls
+             echo '${{ github.event.issue.body }}' >> cata.txt
+            git add -A
+            git commit -m "Add untracked file during workflow"
 
 
              
