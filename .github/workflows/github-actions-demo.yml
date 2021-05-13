@@ -22,9 +22,7 @@ jobs:
              echo '${{ github.event.issue.body }}' >> cata.txt
             git add -A
             git commit -m "Add untracked file during workflow"
-            
-      - name: Create Pull Request
-        uses: bkuppala95/create-pull-request@v3
+            git pull-request "PR for CATALOG CHANGES" -b bkuppala95/CatalogTable:master -h CatalogTable:Chapter3
 
 
              
