@@ -22,7 +22,7 @@ jobs:
              echo '${{ github.event.issue.body }}' >> cata.txt
             git add -A
             git commit -m "Add untracked file during workflow"
-            git pull-request "PR for CATALOG CHANGES" -b bkuppala95/CatalogTable:master -h CatalogTable:Chapter3
+            alias github-pull-request="hub fork;git push -u $GIT_USER HEAD;hub pull-request"
 
 
              
