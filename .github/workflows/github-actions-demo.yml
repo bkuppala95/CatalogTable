@@ -11,7 +11,8 @@ jobs:
       - run: git config --global user.name "Catalogtable"
       - run: git config --global user.email "kuppala.bhavan@gmail.com"
       - run: mkdir GitWorkspace
-      - run: cd GitWorkspace
+      - run: |
+            cd GitWorkspace
              git clone https://github.com/bkuppala95/CatalogTable.git
              cd CatalogTable
              pwd
