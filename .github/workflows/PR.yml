@@ -1,7 +1,7 @@
 name: Auto PR
 on:
   push:
-    branches: ['MyBranch']
+    branches: ['myBranch']
 
 jobs:
   pull-request:
