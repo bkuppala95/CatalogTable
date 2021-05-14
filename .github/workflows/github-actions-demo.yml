@@ -23,10 +23,7 @@ jobs:
              echo '${{ github.event.issue.body }}' >> catalogfile
              git add catalogfile
             git commit -m "Catalog table Updates"
-            git push origin HEAD:master
-            with:
-            Username: bkuppala95
-            Password: Bunny@5991
+            git push "https://bkuppala95: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@github.com/CatalogTable.git" HEAD:master
           
          
 
