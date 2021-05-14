@@ -1,0 +1,22 @@
+name: Auto PR
+on:
+  push:
+    branches: ['MyBranch']
+
+jobs:
+  pull-request:
+    name: Open PullRequest to main
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: checkout
+
+    - uses: repo-sync/pull-request@v2
+      name: pull-request
+      with:
+        destination_branch: "main"
+        pr_title: "Pulling ${{ github.ref }} into main"
+        pr_body: " ***An auto Generated PR***"
+        pr_reviewer: "bkuppala95"
+        pr_draft: true
+        github_token: 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
