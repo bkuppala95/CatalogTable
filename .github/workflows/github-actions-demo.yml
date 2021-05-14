@@ -20,11 +20,13 @@ jobs:
              pwd
              ls
              echo '${{ github.event.issue.body }}' >> cata.txt
-            git add -A
+             git init
+             git add cata.txt
             git commit -m "Add untracked file during workflow"
-            hub create
-            hub version
-            alias github-pull-request="hub fork;git push -u $GIT_USER HEAD;hub pull-request"
+            git remote add origin https://github.com/bkuppala95/CatalogTable.git
+            git push -u origin master
+          
+         
 
              
              
