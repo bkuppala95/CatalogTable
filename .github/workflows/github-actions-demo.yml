@@ -20,7 +20,7 @@ jobs:
              cd Catalog_Table
              pwd
              ls
-             git checkout -b myBranch upstream/master
+             git checkout -b myBranch
              echo '${{ github.event.issue.body }}' >> catalogfile
              git add catalogfile
             git commit -m "Catalog table Updates"
