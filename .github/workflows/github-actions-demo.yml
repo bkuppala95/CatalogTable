@@ -20,7 +20,6 @@ jobs:
              cd Catalog_Table
              pwd
              ls
-             git fetch upstream master
              git checkout -b myBranch upstream/master
              echo '${{ github.event.issue.body }}' >> catalogfile
              git add catalogfile
