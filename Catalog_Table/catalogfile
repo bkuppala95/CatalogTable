@@ -1,2 +1,2 @@
 Table1
-${{ github.event.issue.body }}
+Table2
