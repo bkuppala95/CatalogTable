@@ -25,8 +25,8 @@ jobs:
             git commit -m "Catalog table Updates"
             git push origin HEAD:master
             with:
-            Username for 'https://github.com': bkuppala95
-            Password for 'https://bkuppala95@github.com': Bunny@5991
+            Username: bkuppala95
+            Password: Bunny@5991
           
          
 
