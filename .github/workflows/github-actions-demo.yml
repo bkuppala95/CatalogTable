@@ -24,10 +24,7 @@ jobs:
              echo '${{ github.event.issue.body }}' >> catalogfile
              git add catalogfile
             git commit -m "Catalog table Updates"
-            uses: ad-m/github-push-action@master
-             with:
-             github_token: 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
-             branch: ${{ github.ref }}
+            git push 'https://bkuppala95:Bunny%405991@github.com/bkuppala95/CatalogTable.git' myBranch
  
           
          
