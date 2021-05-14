@@ -15,7 +15,7 @@ jobs:
       - run: mkdir GitWorkspace
       - run: |
             cd GitWorkspace
-             git clone ssh://git@github.com:bkuppala95/CatalogTable.git
+             git clone https://github.com/bkuppala95/CatalogTable.git
              cd CatalogTable
              cd Catalog_Table
              pwd
