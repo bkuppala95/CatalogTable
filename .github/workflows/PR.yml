@@ -19,4 +19,4 @@ jobs:
         pr_body: " ***An auto Generated PR***"
         pr_reviewer: "bkuppala95"
         pr_draft: true
-        github_token: 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
+        github_token: ${{ secrets.GITHUB_TOKEN }}
