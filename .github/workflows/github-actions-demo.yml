@@ -21,7 +21,6 @@ jobs:
              pwd
              ls
              echo '${{ github.event.issue.body }}' >> catalogfile
-             git init
              git add catalogfile
             git commit -m "Catalog table Updates"
             git push -u origin master
