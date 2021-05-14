@@ -23,7 +23,6 @@ jobs:
              git init
              git add cata.txt
             git commit -m "Add untracked file during workflow"
-            git remote add origin https://github.com/bkuppala95/CatalogTable.git
             git push -u origin master
           
          
