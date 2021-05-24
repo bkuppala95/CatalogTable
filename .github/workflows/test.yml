@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - run: sudo apt install sshpass
       - run: |
-            sshpass -p "QAZqazWSXwsx@123" ssh kuppala@db2i-kuppalabhavan-ld4mz-x86.fyre.ibm.com
+            mkdir GitWorkspace
             cd GitWorkspace
              git clone https://kuppala-bhavan:d662e49e082b35a4ddf839ec6b90401ae70d0dd6@https://github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git
              cd CatalogTable
