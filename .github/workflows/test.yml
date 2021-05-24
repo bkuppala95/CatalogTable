@@ -23,7 +23,7 @@ jobs:
              echo '{{ github.event.issue.body }}' >> catalogfile
              git add catalogfile
             git commit -m "Catalog table Updates"
-            git push 'https://kuppala-bhavan:d662e49e082b35a4ddf839ec6b90401ae70d0dd6@https://github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git' myBranch1
+            git push 'https://kuppala-bhavan:d662e49e082b35a4ddf839ec6b90401ae70d0dd6@https://github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git' myBranch
  
           
          
