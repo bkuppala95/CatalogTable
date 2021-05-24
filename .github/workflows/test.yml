@@ -8,7 +8,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - run: sudo apt install sshpass
+      - run: sudo apt-get update
+      - run: sudo apt-get install git
+      - run: git config --global user.name "bkuppala95"
+      - run: git config --global user.email "kuppala.bhavan@gmail.com"
       - run: |
             mkdir GitWorkspace
             cd GitWorkspace
