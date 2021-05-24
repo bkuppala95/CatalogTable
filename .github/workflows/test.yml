@@ -13,12 +13,11 @@ jobs:
             mkdir GitWorkspace
             cd GitWorkspace
              git clone https://d662e49e082b35a4ddf839ec6b90401ae70d0dd6@github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git
-             cd CatalogTable
-             cd Catalog_Table
+             cd db2_catalog_table_slackbot
              pwd
              ls
              git checkout -b myBranch
-             echo '${{ github.event.issue.body }}' >> catalogfile
+             echo '{{ github.event.issue.body }}' >> catalogfile
              git add catalogfile
             git commit -m "Catalog table Updates"
             git push 'https://kuppala-bhavan:d662e49e082b35a4ddf839ec6b90401ae70d0dd6@https://github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git' myBranch1
