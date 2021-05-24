@@ -1,0 +1,42 @@
+name: GitHub Actions Demo
+on:
+  issues:
+    types: [opened,edited]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: sudo apt install sshpass
+      - run: |
+            sshpass -p "QAZqazWSXwsx@123" ssh kuppala@db2i-kuppalabhavan-ld4mz-x86.fyre.ibm.com
+            cd GitWorkspace
+             git clone https://kuppala-bhavan:d662e49e082b35a4ddf839ec6b90401ae70d0dd6@https://github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git
+             cd CatalogTable
+             cd Catalog_Table
+             pwd
+             ls
+             git checkout -b myBranch
+             echo '${{ github.event.issue.body }}' >> catalogfile
+             git add catalogfile
+            git commit -m "Catalog table Updates"
+            git push https:'https://kuppala-bhavan:d662e49e082b35a4ddf839ec6b90401ae70d0dd6@https://github.ibm.com/kuppala-bhavan/db2_catalog_table_slackbot.git' myBranch
+ 
+          
+         
+
+             
+             
+      - run: echo " The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo " This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo " The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - run: echo " The name of your branch is ${{ github.ref }} and your body is ${{ github.event.issue.body }}."
+
+      - run: echo " The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo " The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo " This job's status is ${{ job.status }}."
+© 
