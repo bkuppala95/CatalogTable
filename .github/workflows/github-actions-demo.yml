@@ -2,9 +2,9 @@ name: GitHub Actions Demo
 on:
   issues:
     types: [opened,edited]
-    if: github.event.label.name == 'bug'
 jobs:
   Explore-GitHub-Actions:
+    if: github.event.label.name == '<bug>'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
