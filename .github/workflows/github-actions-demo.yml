@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 on:
   issues:
     types: [opened,edited]
-    title: CCR
+    if: github.event.label.name == 'bug'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
