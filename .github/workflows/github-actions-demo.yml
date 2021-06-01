@@ -2,6 +2,7 @@ name: GitHub Actions Demo
 on:
   issues:
     types: [opened,edited]
+    title: CCR
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
