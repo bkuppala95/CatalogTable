@@ -4,7 +4,7 @@ on:
     types: [opened,edited]
 jobs:
   Explore-GitHub-Actions:
-    if: github.event.title == 'CCR'
+    if: github.event.labels == 'CCR'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
