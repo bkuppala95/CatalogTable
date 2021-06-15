@@ -418,3 +418,84 @@ ASDF@gmail.com
 </Entry>
 Test
 CCR
+<Entry>
+
+
+<Developer_Name>
+Bhavan
+
+</Developer_Name>
+
+
+<Developer_email>
+Bhavan@ibm.com
+
+</Developer_email>
+
+
+<!- This would be your CCR, VCR, Routine, Config Change request number ->
+<Change_Request_Number>
+ 1234
+</Change_Request_Number>
+
+
+<!- Story associated with the changes ->
+<Story_Number>
+100
+</Story_Number>
+
+
+<!- RTC link/url ->
+<RTC_Link>
+link.com
+</RTC_Link>
+
+
+<!- Defect number through which you deliver this defect ->
+<Defect_Number>
+100
+</Defect_Number>
+
+
+
+
+<!- The type of Database change i.e one of these: CATALOG, LOG, CONFIG, ROUTINE, PACKAGE, OTHER
+IF YOU CHOOSE OTHER, PLEASE ALSO SEND AN EMAIL TO THE "DB2-Deployment-ISL" DISTRIBUTION LIST AS
+THIS VALUE IS INTENDED TO CAPTURE NEW/UNKNOWN TYPES OF CHANGES ONLY. ->
+
+
+<DB_Change_Type>
+LOG
+</DB_Change_Type>
+
+
+
+
+<!- If CATALOG change type, please fill in this section. If not CATALOG type, you can delete this section. ->
+<Catalog_change>
+
+&lt;!- If CATALOG change type, please fill in this section. If not CATALOG type, you can delete this section. -&gt; &lt;Catalog_change&gt;         &lt;!- Catalog table/view schema -&gt;         &lt;Catalog_Schema&gt;   Test      &lt;/Catalog_Schema&gt;         &lt;!- Catalog table/view name -&gt;         &lt;Catalog_Name&gt;    <column>
+test
+</column>
+<column>
+tedt1
+</column>     &lt;/Catalog_Name&gt;         &lt;!- What is the change type? Use one of the abbreviations for the corresponding actions               DROP - Catalog table/view is being dropped               ADD/DEL/UPDATE - New column being added, column being deleted, Column being updated respectively               COMMENTS - Comments being updated for the table/view/column        PD - Packed Descriptor is changed        NEWINX - New index/indices being added -&gt;  &lt;Catalog_Change_Type&gt; ADD &lt;/Catalog_Change_Type&gt;         &lt;!- Column name. For each column, pls. include a new &lt;Column_Name&gt; entry -&gt;         <column>
+test
+</column>
+<column>
+tedt1
+</column>  &lt;!- Index related information. For each Index changed/added, pls. include a new &lt;Index_Name&gt; entry -&gt;         <index>
+test
+</index>  &lt;!-If you have changed the packed descriptor, pls mention the column name-&gt;  &lt;Packed_Desc_Column_Name&gt; NA &lt;/Packed_Desc_Column_Name&gt; &lt;/Catalog_change&gt;
+
+</Catalog_change>
+
+
+<!- Include any internal details like design document links, technical details of the implementation, etc
+Useful for internal reference for developers and QA ->
+<Internal_Description>
+NA
+</Internal_Description>
+
+
+</Entry>
